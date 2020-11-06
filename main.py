@@ -28,8 +28,7 @@ for name_folder in lst_folders:
     # Открываем json используя название папки
     fio = open_json(name_folder)
     # Создаем папку с таким же именем
-    # if not os.path.isdir(name_folder):
-    #     os.mkdir(name_folder)
+
     os.renames(f'data/{name_folder}',f'data/{fio}')
 
 """
