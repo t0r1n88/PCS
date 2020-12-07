@@ -24,10 +24,12 @@ def open_json(path):
         name_folder = f'{bar["lastname"]}_{bar["firstname"]}_{bar["middlename"]} '
     return name_folder
 
+
+
 for name_folder in lst_folders:
     # Открываем json используя название папки
     fio = open_json(name_folder)
-    # Создаем папку с таким же именем
+    # переименовываем папку
 
     os.renames(f'data/{name_folder}',f'data/{fio}')
 
